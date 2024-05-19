@@ -17,7 +17,7 @@ const HelperHeader = () => {
     (state: RootState) => state.compilerSlice.CurrentLanguage
   );
   return (
-    <div className="__helper-header h-[50px] bg-black text-white p-2 flex items-center justify-between">
+    <div className="__helper-header h-[50px] bg-black text-white p-2 flex items-center justify-between sticky">
       <div className="__btn_container flex gap-2">
         <Button variant="success" className=" flex gap-2 ">
           <Save />
@@ -28,7 +28,7 @@ const HelperHeader = () => {
           Share
         </Button>
       </div>
-      <div className="__tab_switcher flex justify-center items-center gap-1">
+      <div className="__tab_switcher flex justify-center items-center gap-3">
         <small> Current Language: </small>
         <Select
           defaultValue={currentLanguage}
